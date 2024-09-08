@@ -1,0 +1,45 @@
+
+
+#navbar {
+    background: linear-gradient(180deg, rgb(195, 216, 185) 0%, rgb(184, 243, 108) 100%);
+}
+
+
+
+#footer {
+    background: rgb(138, 201, 109);
+    background: linear-gradient(180deg, rgb(195, 216, 185) 0%, rgb(184, 243, 108) 100%);
+}
+
+#social-icons {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #333;
+}
+
+.privacy-policy {
+    font-size: 12px;
+    color: #334ae1;
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .text-left, .text-right {
+        text-align: center !important;
+    }
+    
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

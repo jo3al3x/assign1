@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML/RSS Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="xml_json_css.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/global.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                ITWD6.408
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Forms.html">Forms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="XML_Json.html">XML/Json</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="js_demo.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Research.html">Research</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>XML/RSS Page</h1>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-xml-tab" data-bs-toggle="pill" data-bs-target="#v-pills-xml" type="button" role="tab" aria-controls="v-pills-xml" aria-selected="true">XML</button>
+    <button class="nav-link" id="v-pills-rss-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rss" type="button" role="tab" aria-controls="v-pills-rss" aria-selected="false">RSS</button>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-xml" role="tabpanel" aria-labelledby="v-pills-xml-tab">
+                        <h2>XML Syntax Rules</h2>
+                        
+                        <div id="xml-rules" class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="rule-container">
+                                    <h3>XML documents must have a root element</h3>
+                                    <div class="xml-example">
+&lt;root&gt;
+    &lt;child&gt;Content&lt;/child&gt;
+&lt;/root&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="rule-container">
+                                    <h3>XML tags are case sensitive</h3>
+                                    <div class="xml-example">
+&lt;Person&gt;
+    &lt;Name&gt;John&lt;/Name&gt;
+&lt;/Person&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="rule-container">
+                                    <h3>XML elements must be properly nested</h3>
+                                    <div class="xml-example">
+&lt;parent&gt;
+    &lt;child&gt;Content&lt;/child&gt;
+&lt;/parent&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="rule-container">
+                                    <h3>XML attribute values must be quoted</h3>
+                                    <div class="xml-example">
+                                        &lt;element attribute="value"&gt;Content&lt;/element&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="rule-container">
+                                    <h3>Comments in XML use &lt;!-- --&gt; syntax</h3>
+                                    <div class="xml-example">
+&lt;!-- This is a comment --&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="rule-container">
+                                    <h3>Special characters must be escaped</h3>
+                                    <div class="xml-example">
+&lt;element&gt;Content with &amp;amp; symbol&lt;/element&gt;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-rss" role="tabpanel" aria-labelledby="v-pills-rss-tab">
+                        <h2>RSS Feed</h2>
+                        <div id="rssFeed"></div>
+                            <!-- RSS feed content will go here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    <footer id="footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3 col-lg pt-3">
+                                    <div id="social-icons" class="pt-3">
+                                        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                                        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                                        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-12 text-center">
+                                    <span class="copyright">©2024 Joe Alexander</span>
+                                </div>
+                                <div class="col-sm-6 col-lg-12 text-end">
+                                    <a href="#" class="privacy-policy">Privacy Policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                
+                    <script
+                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                    <script src="script.js"></script>
+
+                </body>
+</html>
